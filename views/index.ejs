@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>the great number game</h1>
+<form action="/process" method="post">
+    <input type="text" name="guess" placeholder="guess a number" autocomplete="off">
+    <button type="submit" name="cta" value="guess-btn">Guess</button>
+</form>
+
+<div>
+    <h1><%=rand%></h1>
+
+    <%if(Number(guess) > rand){%>
+        <h1>Too High</h1>
+    <%}%>
+    <%if(Number(guess) < rand){%>
+        <h1>Too Low</h1>
+    <%}%>
+    <%if(Number(guess) === rand){%>
+        <h1>You've Got it Right, Random Number is <%=rand%></h1>
+    <%}%>
+
+
+</div>
+
+</body>
+</html>
